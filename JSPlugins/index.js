@@ -9,3 +9,13 @@ new Typewriter("h1", {
   cursor: "", // to remove pipe
   delay: 10, // faster
 });
+
+let heading = document.querySelector("#challenge-2");
+heading.innerHTML = "Karina Romano Perozzo";
+
+new Typewriter("#challenge-3", {
+  strings: "Karina Romano Perozzo", // in array ["Hello World"] to show and remove // "" to show and still
+  autoStart: true,
+  cursor: "", // to remove pipe
+  delay: 10, // faster
+});
