@@ -10,12 +10,14 @@ new Typewriter("h1", {
   delay: 10, // faster
 });
 
+// Challenge 2
 let heading = document.querySelector("#challenge-2");
 heading.innerHTML = "Karina Romano Perozzo";
 
+// Challenge 3
 new Typewriter("#challenge-3", {
   strings: "Karina Romano Perozzo", // in array ["Hello World"] to show and remove // "" to show and still
   autoStart: true,
-  cursor: "", // to remove pipe
+  cursor: "🎾", // to remove pipe
   delay: 10, // faster
 });
