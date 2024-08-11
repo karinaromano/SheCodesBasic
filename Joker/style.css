@@ -1,31 +1,77 @@
 body {
-  background-color: #f96d00;
-}
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('background.png'); /* Add your image path here */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
 
-button {
-  border-radius: 10px;
-  padding: 20px 40px;
-  border-color: #f96d00;
-  color: #393e46;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 40px;
-  font-weight: 600;
-  background-color: #f96d00;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 50px;
-}
-
-.emoji {
-  font-size: 60px;
 }
 
 .center {
-  margin: auto;
-  width: 40%;
-  padding: 40px;
+  text-align: center;
+  max-width: 90%;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.joke {
+#joke-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.joke-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+#joke {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
   text-align: center;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 480px) {
+  .joke-image {
+    max-width: 80%;
+  }
+
+  #joke {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #joke {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
 }
