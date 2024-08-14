@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>My weather application</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #f9f7fe;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #885df1;
+      }
+      .frame {
+        background-color: #ffff;
+        padding: 30px;
+        max-width: 600px;
+        margin: 60px auto;
+        border-radius: 10px;
+        box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+        width: 90%;
+      }
+      .search-bar {
+        background-color: #f9f7fe;
+        border: none;
+        padding: 20px;
+        width: 75%;
+        color: rgba(39, 33, 66, 0.4);
+        border-radius: 6px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      .search-button {
+        margin-left: 5px;
+        font-size: 1rem;
+        background-color: #885df1;
+        color: #ffff;
+        border: none;
+        padding: 20px;
+        line-height: 1;
+        border-radius: 5px;
+      }
+
+
+      .current-city {
+        font-size: 38px;
+        font-weight: 900;
+        margin: 0;
+      }
+
+      .current-details {
+        color: rgba(39, 33, 66, 0.4);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .highlight {
+        color: #f65282;
+      }
+
+      .current-temperature {
+        font-size: 48px;
+        font-weight: 900;
+        display: flex;
+
+        justify-content: end;
+        margin: 10px;
+      }
+      .current-temperature-icon {
+        position: relative;
+        top: 24px;
+        font-size: 40px;
+        margin-right: 10px;
+      }
+      .current-temperature-value {
+        font-size: 80px;
+        font-weight: bold;
+      }
+      .current-temperature-unit {
+        font-size: 28px;
+      }
+      .current-weather {
+        display: flex;
+      }
+      hr {
+        margin-top: 30px;
+        color: #f9f7fe;
+      }
+      footer {
+        border-top: 1px solid #f9f7fe;
+        text-align: center;
+        padding-top: 15px;
+        color: rgba(39, 33, 66, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter a city"
+            class="search-bar"
+            required
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </div>
+      <div class="current-temperature">
+        <span class="current-temperature-icon">☀️ </span>
+        <span class="current-temperature-value">24 </span>
+        <span class="current-temperature-unit">°C </span>
+      </div>
+      <div class="current-info">
+        <h1 class="current-city">Paris</h1>
+        <p class="current-details">
+          Saturday 15:32, moderate rain <br />
+          Humidity: <strong class="highlight">87%</strong>, Wind:
+          <strong class="highlight">7.2km/h</strong>
+        </p>
+      </div>
+
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://www.linkedin.com/in/karinaromano/" target="_blank"
+            >Karina Romano</a
+          >
+          <br />
+          and is on
+          <a href="https://github.com/karinaromano" target="_blank">Github</a>
+          and hosted on
+          <a
+            href="https://app.netlify.com/teams/karinaromano/sites"
+            target="_blank"
+            >Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
