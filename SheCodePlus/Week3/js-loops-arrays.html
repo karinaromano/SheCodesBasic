@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrays and Loops</title>
+    <style>
+      li strong {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS Arrays and Loops</h1>
+    <p>Allow us to create a collection of data</p>
+    <h2>Array</h2>
+    <p>
+      Array is like a table, The Array object, as with arrays in other
+      programming languages, enables storing a collection of multiple items
+      under a single variable name, and has members for performing common array
+      operations.
+    </p>
+    <p>
+      example of Array with 4 items => let cities = ["New York", "Paris",
+      "Moscow", "Sydney"];
+    </p>
+    <p>
+      If I want to access New York, I have to type => cities [0] it is called
+      index
+    </p>
+    <h2>Length</h2>
+    <p>
+      To know the lenght of your array, you just need to use for example
+      cities.length
+    </p>
+    <img src="arrays.png" alt="" width="400" />
+    <h2>Loops</h2>
+    <p>
+      Loops repeat an action some number of times. Loop through each item of the
+      array, you run one by one
+    </p>
+    <p>let countries = ["USA", "Brasil", "England"];</p>
+    <img src="loops.png" alt="" width="500" />
+    <ul>
+      <li>Paris</li>
+      <li>Roma</li>
+      <li>Barcelona</li>
+      <li>São Paulo</li>
+    </ul>
+    <img src="loops2.png" alt="" width="400" />
+    <img src="loops3.png" alt="" width="500" />
+    <script>
+      function showLocals(localsElement) {
+        localsElement.innerHTML = // I want each local of html to be wraped inside a strong element
+          "<strong>" + localsElement.innerHTML + "</strong>";
+      }
+      let locals = document.querySelectorAll("li"); // 1st is selecting all the li
+      locals.forEach(showLocals); //2nd go to each index of the li
+      //-----------------------------------------------------------------------------------------
+      function showPlaces(placesElement) {
+        // called the function showPlaces
+        console.log(placesElement.innerHTML); // and requested to "print" the list
+      }
+      let places = document.querySelectorAll("li"); // 1st we are selecting all the li
+      places.forEach(showPlaces); // 2nd I am saying I want you to go to each index
+      // ... and gave the function name of showPlaces as per above
+      //---------------------------------------------------------------------------------------
+      let cities = ["New York", "Paris", "Moscow", "Sydney"]; // this is a array
+      console.log(cities.length); // 4, to know the length
+      console.log(cities[1] === "London"); // it is false
+      cities[1] = "London"; // to change the index 1 from Paris to London
+      console.log(cities[1]); // to check if the city has been replaced
+      console.log(cities); // to check all the cities in the array
+      cities[4] = "Barcelona"; // Added Barcelona on the 4th index
+      console.log(cities);
+      //---------------------------------------------------------------------------------------
+      function showCountries(countries) {
+        console.log(countries);
+        alert(countries);
+      }
+      let countries = ["USA", "Brasil", "England"];
+      console.log(countries[1]); // it will show Brasil
+      countries.forEach(showCountries); // to go through each of them - for that need to have a function to called for each item
+    </script>
+  </body>
+</html>
