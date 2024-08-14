@@ -3,15 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JS Revision</title>
   </head>
   <body>
+    <!--Exercise: When the page loads, ask for the applicant first name using a prompt.
+    Alert"Welcome, firstName" Bonus: If user does not enter her first name, Alert: "Too bad for you".-->
     <script>
       let firstName = prompt("What is your first name?");
-      if (firstName.trim() === "" || firstName.length < 1) {
+      if (firstName.trim() === ""){
+      //if (firstName.trim() === "" || firstName.length < 1) {
         alert("Too bad for you");
       } else {
         alert("Welcome " + firstName);
+      }
+
+      let football = prompt("What team do you support?");
+      football = football.trim();
+      if (football === "") {
+        alert("Oh no! Please enter a team");
+      } else {
+        alert("You are a " + football + " supporter!");
       }
     </script>
   </body>

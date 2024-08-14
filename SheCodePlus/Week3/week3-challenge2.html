@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Challenge 1</h1>
+    <p>
+      Given a variable country set to "Guinea Bissau", replace the space by a
+      "-", console.log the variable
+    </p>
+    <h1>JS Challenge 2</h1>
+    <p>
+      Given a variable city set to " Sidney ", remove the extra spaces and
+      console log it
+    </p>
+    <h1>JS Challenge 3</h1>
+    <p>
+      Given a variable attraction set to "Opera House", lower case it and
+      console log it
+    </p>
+    <h1>JS Challenge 4</h1>
+    <p>
+      Given a variable place set to "school", upper case it and console log it
+    </p>
+    <h1>JS Challenge 5</h1>
+    <p>
+      Using templates literals, log this sentence, "I went to visit the Opera
+      House in Sidney, right next to my school. Now, I'm getting ready for my
+      trip to Guinea Bissau!"
+    </p>
+    <script>
+      //Challenge 1
+      let country = "Guinea Bissau";
+      country = country.replace(" ", "-");
+      console.log(country);
+
+      //Challenge 2
+      let city = " Sidney ";
+      city = city.trim();
+      console.log(city);
+
+      //Challenge 3
+      let attraction = "Opera House";
+      attraction = attraction.toLowerCase();
+      console.log(attraction);
+
+      //Challenge 4
+      let place = "school";
+      place = place.toUpperCase();
+      console.log(place);
+
+      //Challeng 5
+      console.log(`I went to visit the ${attraction} in ${city}, right next to my ${place}.
+      Now, I'm getting ready for my
+      trip to ${country}!`);
+    </script>
+  </body>
+</html>

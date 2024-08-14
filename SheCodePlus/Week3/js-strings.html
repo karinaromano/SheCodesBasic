@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Strings</title>
+  </head>
+  <body>
+    <h1>JS Strings</h1>
+    <script>
+      let city = "Montreal";
+      console.log("From", city);
+      city = city.replace("e", "é"); //this will replace e to the é
+      console.log("To", city);
 
-</body>
+      let name = "Karina";
+      console.log(name);
+      name = name.toLowerCase();
+      console.log(name);
+
+      let bread = "shih tzu";
+      console.log(bread);
+      bread = bread.toUpperCase();
+      console.log(bread);
+
+      let breadE = "shih tzu     ";
+      breadE = breadE.trim().replace(" ", "☀️"); // it removes the space only before and after not between
+      console.log(breadE);
+
+      let brand = "Vivre";
+      console.log("From", brand);
+      brand = brand.trim().replace("e", "é").toUpperCase();
+      console.log("To", brand);
+
+      let cidade = "São Paulo";
+      let pais = "Brasil";
+      console.log("Eu moro em " + cidade + ", no " + pais)
+      console.log(`Eu vivo em ${cidade}, no ${pais}`) // best way is to use back tick
+
+    </script>
+  </body>
 </html>
