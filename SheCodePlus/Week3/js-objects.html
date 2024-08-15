@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Objects</title>
+  </head>
+  <body>
+    <h1>JS Object</h1>
+    <p>One of the most important JS DataType</p>
+    <p>
+      Think about a physical object, as a car that has different properties and
+      actions. To create a object in JS you have to use curly brackets
+    </p>
+    <img src="./images/jsobject1.png" alt="" width="400" /> <br />
+    <img src="./images/jsobject2.png" alt="" width="400" /> <br />
+    <img src="./images/jsobject3.png" alt="" width="400" />
+
+    <script>
+      let city = [
+        {
+          name: "Brasília", // name is a propertie and Brasíliais the value
+          country: "Brasil",
+          population: 4.935,
+          portugueseSpeaking: true,
+        },
+        {
+          name: "Liverpool",
+          country: "England",
+          population: 497.0,
+          portugueseSpeaking: false,
+        },
+        {
+          name: "Paris",
+          country: "France",
+          population: 500.0,
+          portugueseSpeaking: false,
+        },
+      ];
+
+      console.log(city[1].name);
+      console.log(city[2].country);
+    </script>
+  </body>
+</html>

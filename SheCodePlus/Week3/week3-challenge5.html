@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Objects Challenge</title>
+  </head>
+  <body>
+    <h1>JS Challenge 1</h1>
+    <p>Create an object weather and console log it</p>
+    <img src="./images/object1.png" alt="" width="400" />
+    <h1>JS Challenge 2</h1>
+    <p>
+      Create an object weather with properties of temperatue and humidity and
+      console log the object
+    </p>
+    <img src="./images/object2.png" alt="" width="400" />
+    <h1>JS Challenge 3</h1>
+    <p>Console log the humidity and the temperature</p>
+    <img src="./images/object3.png" alt="" width="400" />
+    <h1>JS Challenge 4</h1>
+    <p>Add a property windSpeed and console log it</p>
+    <img src="./images/Object4.png" alt="" width="800" />
+    <h1>JS Challenge 5</h1>
+    <p>
+      Console log the wind speed, the temperature and the humidity using the
+      square brackets syntax.
+    </p>
+    <img src="./images/Object5.png" alt="" width="400" />
+    <h1>JS Challenge 6</h1>
+    <p>
+      Create an object or an array of objects called `forecast`with each day
+      temperature, and console log it.
+    </p>
+    <img src="./images/Object6.png" alt="" width="400" /> <br />
+    <img src="./images/Object7.png" alt="" width="400" /> <br />
+    <img src="./images/Object8.png" alt="" width="600" />
+    <script>
+      //Challenge 1
+      let weather = {};
+      console.log(weather);
+      //Challenge 2
+      weather = {
+        humidity: 19,
+        temperature: 35,
+      };
+      console.log(weather);
+      //Challenge 3
+      console.log(weather.humidity);
+      console.log(weather.temperature);
+      //Challenge 4 First Approach: Using Object.defineProperty------------------------------------------
+      //By default, properties added via Object.defineProperty are non-writable, non-enumerable,
+      //and non-configurable unless explicitly specified.
+      //Since the property is non-writable by default, you won't be able to modify this value later
+      //using weather["windSpeed"] = 5; or weather.windSpeed = 5;.
+      Object.defineProperty(weather, "windSpeed", {
+        value: 38,
+        writable: true, // had to add writable true
+      }); // Adding a property windSpeed
+      console.log(weather.windSpeed); //Console log it
+      //Challenge 4 (2nd approach)Second Approach: Using Bracket Notation------------------------------------------------------------------------
+      //This approach directly sets the windSpeed property to 5 using bracket notation.
+      //It works if the property is writable.
+      weather["windSpeed"] = 5;
+      console.log(weather.windSpeed);
+      //Challenge 4 (3rd approach) Third Approach: Using Dot Notation
+      weather.windSpeed = 5;
+      console.log(weather.windSpeed);
+      //Challenge 5
+      console.log(weather["humidity"]);
+      console.log(weather["temperature"]);
+      console.log(weather["windSpeed"]);
+      //Challenge 6
+      //1st Approach
+      let forecast = {
+        monday: 17,
+        tuesday: 17,
+        wednesday: 17,
+        thursday: 17,
+        friday: 17,
+        saturdat: 17,
+        sunday: 17,
+      };
+      console.log(forecast);
+      console.log(forecast.tuesday);
+      //2nd approach
+      let forecastB = [
+        {
+          day: "Monday",
+          temp: 19,
+        },
+        {
+          day: "Tuesday",
+          temp: 16,
+        },
+        {
+          day: "Wednesday",
+          temp: 18,
+        },
+        {
+          day: "Thursday",
+          temp: 20,
+        },
+        {
+          day: "Friday",
+          temp: 22,
+        },
+        {
+          day: "Satudary",
+          temp: 25,
+        },
+        {
+          day: "Sunday",
+          temp: 28,
+        },
+      ];
+      console.log(forecastB);
+      console.log(forecastB[0].day);
+      console.log(forecastB[0].temp);
+      console.log(
+        `The temperature for tomorrow will be ${forecastB[0].temp} degrees`
+      );
+      console.log(
+        `The temperature for the day after tomorrow will be ${forecastB[1].temp} degrees`
+      );
+    </script>
+  </body>
+</html>
