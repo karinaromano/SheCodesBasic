@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h2>Challenge 1</h2>
+    <p>
+      Create an array weekDays with all days of the week, console log the array
+    </p>
+    <img src="./images/challenge4-1.png" alt="" width="400" />
+    <h2>Challenge 2</h2>
+    <p>Log 'Monday' and 'Sunday'</p>
+    <img
+      src="./images/challenge4-2.png"
+      alt=""
+      width="400
+    "
+    />
+    <h2>Challenge 3</h2>
+    <p>Change 'Sunday' by 'Funday'and log the array</p>
+    <img src="./images/challenge4-3.png" alt="" width="400" />
+
+    <h2>Challenge 4</h2>
+    <p>Remove Monday and Tuesday and log the array</p>
+    <img src="./images/challenge4-4.png" alt="" width="400" />
+    <h2>Challenge 5</h2>
+    <p>
+      Log every day of the week this way: "Temperature on Monday is 18 degress"
+    </p>
+    <img src="./images/challenge4-5.png" alt="" width="500" />
+    <script>
+      //Challenge 1
+      let weekDays = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ];
+      console.log(weekDays);
+      //Challenge 2
+      console.log(weekDays[0]);
+      console.log(weekDays[6]);
+      //Challenge 3
+      weekDays[6] = "Funday";
+      console.log(weekDays[6]);
+      //Challenge 4
+      weekDays.splice(0, 1); //weekDays.shift()
+      weekDays.splice(0, 1); //weekDays.shift()
+      console.log(weekDays);
+      //Challenge 5
+      //1st approach
+      console.log(`Temperature on ${weekDays[0]} is 18 degress`);
+      console.log(`Temperature on ${weekDays[1]} is 18 degress`);
+      console.log(`Temperature on ${weekDays[2]} is 18 degress`);
+      console.log(`Temperature on ${weekDays[3]} is 18 degress`);
+      console.log(`Temperature on ${weekDays[4]} is 18 degress`);
+      console.log(`Temperature on ${weekDays[5]} is 18 degress`);
+      console.log(`Temperature on ${weekDays[6]} is 18 degress`);
+      //2nd approach - using a function
+      function showTemperature(day) {
+        console.log(`Temperature on ${day} is 18 degress`);
+      }
+      weekDays.forEach(showTemperature); // 1st for each of the weekdays,
+      //I want you to show the temperature established at the function above
+    </script>
+  </body>
+</html>
